@@ -1,5 +1,4 @@
 import { InputWithButton } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
 export default function Home() {

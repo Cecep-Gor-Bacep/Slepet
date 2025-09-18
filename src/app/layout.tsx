@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-none`}
       >
-      <div className="flex justify-end"><AnimatedThemeToggler className="cursor-none  "/><SmoothCursor /></div>
+      <div className="flex justify-end"><AnimatedThemeToggler className="cursor-none"/><SmoothCursor /></div>
         {children}
       </body>
     </html>

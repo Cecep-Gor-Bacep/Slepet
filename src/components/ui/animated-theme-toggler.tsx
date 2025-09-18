@@ -1,5 +1,4 @@
 "use client";
-
 import { Moon, SunDim } from "lucide-react";
 import { useState, useRef } from "react";
 import { flushSync } from "react-dom";
