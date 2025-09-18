@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Globe } from "@/components/ui/globe";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { Input } from "@/components/ui/input";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body 
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-none`}
       >
+      <div className="flex justify-end"><AnimatedThemeToggler className="cursor-none  "/><SmoothCursor /></div>
         {children}
-        <AnimatedThemeToggler />
       </body>
     </html>
   );

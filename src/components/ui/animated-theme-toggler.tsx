@@ -4,6 +4,7 @@ import { Moon, SunDim } from "lucide-react";
 import { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
+import "@/app/globals.css";
 
 type props = {
   className?: string;
@@ -24,8 +25,8 @@ export const AnimatedThemeToggler = ({ className }: props) => {
 
     const { top, left, width, height } =
       buttonRef.current.getBoundingClientRect();
-    const y = top + height / 50;
-    const x = left + width / 50;
+    const y = top + height / 2;
+    const x = left + width / 2;
 
     const right = window.innerWidth - left;
     const bottom = window.innerHeight - top;
@@ -46,8 +47,8 @@ export const AnimatedThemeToggler = ({ className }: props) => {
     );
   };
   return (
-    <button ref={buttonRef} onClick={changeTheme} className={cn(className)}>
+    <div className="cursor-none"><button ref={buttonRef} onClick={changeTheme} className={cn(className)}>
       {isDarkMode ? <SunDim /> : <Moon />}
-    </button>
+    </button></div>
   );
 };
