@@ -5,6 +5,7 @@ import { Globe } from "@/components/ui/globe";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Input } from "@/components/ui/input";
+import { GridPattern } from "@/components/ui/grid-pattern";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-none`}
       >
-      <div className="flex justify-end"><AnimatedThemeToggler className="cursor-none"/><SmoothCursor /></div>
+      <div className="flex justify-end">
+        <GridPattern className="opacity-25"/>
+        <AnimatedThemeToggler className="cursor-none"/>
+        <SmoothCursor /></div>
         {children}
       </body>
     </html>
