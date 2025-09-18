@@ -9,7 +9,7 @@ export default function Home() {
         <div className="-z-50 opacity-40" >
           <Globe />
         </div>
-        <h1 className="text-3xl"> WELCOME JUKI</h1>
+        <h1 className="text-2xl"> WELCOME JUKI</h1>
         <Image
           className="dark:invert"
           src="/next.svg"
